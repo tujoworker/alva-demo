@@ -1,0 +1,311 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component renders correctly have to match snapshot 1`] = `
+<Container>
+  <div
+    className="app_content"
+    css="css-1uifu4x"
+  >
+    <div
+      css="css-10zrkg5"
+    >
+      <div
+        css="css-1eb3d0b"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <fieldset>
+            <Input
+              field={
+                Field {
+                  "$bindings": "default",
+                  "$changed": false,
+                  "$clearing": false,
+                  "$default": "",
+                  "$disabled": false,
+                  "$extra": null,
+                  "$focused": false,
+                  "$handlers": Object {},
+                  "$hooks": Object {},
+                  "$initial": "",
+                  "$input": [Function],
+                  "$interceptors": null,
+                  "$label": "Name",
+                  "$observers": null,
+                  "$options": Object {},
+                  "$output": [Function],
+                  "$placeholder": "Your Name",
+                  "$related": Array [],
+                  "$resetting": false,
+                  "$rules": "required|string|between:5,25",
+                  "$submitting": false,
+                  "$touched": false,
+                  "$validatedWith": "value",
+                  "$validating": false,
+                  "$validators": null,
+                  "$value": "",
+                  "autoFocus": false,
+                  "debouncedValidation": [Function],
+                  "disposeValidationOnBlur": [Function],
+                  "errorAsync": null,
+                  "errorSync": "The Name field is required.",
+                  "execHandler": [Function],
+                  "execHook": [Function],
+                  "fields": Object {},
+                  "files": undefined,
+                  "hasInitialNestedFields": false,
+                  "id": "name--1",
+                  "incremental": false,
+                  "intercept": [Function],
+                  "key": "name",
+                  "name": "name",
+                  "noop": [Function],
+                  "observe": [Function],
+                  "onAdd": [Function],
+                  "onBlur": [Function],
+                  "onChange": [Function],
+                  "onClear": [Function],
+                  "onDel": [Function],
+                  "onDrop": [Function],
+                  "onFocus": [Function],
+                  "onReset": [Function],
+                  "onSubmit": [Function],
+                  "onToggle": [Function],
+                  "path": "name",
+                  "showError": false,
+                  "state": State {
+                    "$struct": Array [],
+                    "bindings": Bindings {
+                      "rewriters": Object {
+                        "default": Object {
+                          "autoFocus": "autoFocus",
+                          "checked": "checked",
+                          "disabled": "disabled",
+                          "id": "id",
+                          "label": "label",
+                          "name": "name",
+                          "onBlur": "onBlur",
+                          "onChange": "onChange",
+                          "onFocus": "onFocus",
+                          "placeholder": "placeholder",
+                          "type": "type",
+                          "value": "value",
+                        },
+                      },
+                      "templates": Object {},
+                    },
+                    "current": Object {
+                      "fields": Object {},
+                      "props": Object {},
+                    },
+                    "disposers": Object {
+                      "interceptor": Object {},
+                      "observer": Object {},
+                    },
+                    "form": FormModel {
+                      "$clearing": false,
+                      "$handlers": Object {},
+                      "$hooks": Object {
+                        "onError": [Function],
+                        "onSuccess": [Function],
+                      },
+                      "$resetting": false,
+                      "$submitting": false,
+                      "$validating": false,
+                      "debouncedValidation": [Function],
+                      "execHandler": [Function],
+                      "execHook": [Function],
+                      "fields": Object {
+                        "name": [Circular],
+                      },
+                      "intercept": [Function],
+                      "name": null,
+                      "noop": [Function],
+                      "observe": [Function],
+                      "onAdd": [Function],
+                      "onClear": [Function],
+                      "onDel": [Function],
+                      "onReset": [Function],
+                      "onSubmit": [Function],
+                      "state": [Circular],
+                      "validator": Validator {
+                        "drivers": Object {
+                          "dvr": DVR {
+                            "asyncRules": Array [],
+                            "extend": undefined,
+                            "options": Options {
+                              "options": Object {
+                                "allowRequired": false,
+                                "autoParseNumbers": false,
+                                "defaultGenericError": null,
+                                "retrieveOnlyDirtyValues": false,
+                                "retrieveOnlyEnabledFields": false,
+                                "showErrorsOnBlur": true,
+                                "showErrorsOnChange": true,
+                                "showErrorsOnClear": false,
+                                "showErrorsOnInit": false,
+                                "showErrorsOnReset": true,
+                                "showErrorsOnSubmit": true,
+                                "strictDelete": true,
+                                "strictUpdate": false,
+                                "submitThrowsError": true,
+                                "uniqueId": [Function],
+                                "validateDisabledFields": false,
+                                "validateOnBlur": true,
+                                "validateOnChange": false,
+                                "validateOnInit": true,
+                                "validationDebounceOptions": Object {
+                                  "leading": false,
+                                  "trailing": true,
+                                },
+                                "validationDebounceWait": 250,
+                              },
+                            },
+                            "promises": Array [],
+                            "validator": [Function],
+                            "validators": Object {},
+                          },
+                          "vjf": VJF {
+                            "options": Options {
+                              "options": Object {
+                                "allowRequired": false,
+                                "autoParseNumbers": false,
+                                "defaultGenericError": null,
+                                "retrieveOnlyDirtyValues": false,
+                                "retrieveOnlyEnabledFields": false,
+                                "showErrorsOnBlur": true,
+                                "showErrorsOnChange": true,
+                                "showErrorsOnClear": false,
+                                "showErrorsOnInit": false,
+                                "showErrorsOnReset": true,
+                                "showErrorsOnSubmit": true,
+                                "strictDelete": true,
+                                "strictUpdate": false,
+                                "submitThrowsError": true,
+                                "uniqueId": [Function],
+                                "validateDisabledFields": false,
+                                "validateOnBlur": true,
+                                "validateOnChange": false,
+                                "validateOnInit": true,
+                                "validationDebounceOptions": Object {
+                                  "leading": false,
+                                  "trailing": true,
+                                },
+                                "validationDebounceWait": 250,
+                              },
+                            },
+                            "promises": Array [],
+                            "validator": null,
+                          },
+                        },
+                        "error": null,
+                        "form": [Circular],
+                        "options": Object {},
+                        "plugins": Object {
+                          "dvr": [Function],
+                          "svk": false,
+                          "vjf": true,
+                        },
+                        "promises": Array [],
+                        "schema": Object {},
+                      },
+                    },
+                    "initial": Object {
+                      "fields": Object {},
+                      "props": Object {},
+                    },
+                    "mode": "unified",
+                    "options": Options {
+                      "options": Object {
+                        "allowRequired": false,
+                        "autoParseNumbers": false,
+                        "defaultGenericError": null,
+                        "retrieveOnlyDirtyValues": false,
+                        "retrieveOnlyEnabledFields": false,
+                        "showErrorsOnBlur": true,
+                        "showErrorsOnChange": true,
+                        "showErrorsOnClear": false,
+                        "showErrorsOnInit": false,
+                        "showErrorsOnReset": true,
+                        "showErrorsOnSubmit": true,
+                        "strictDelete": true,
+                        "strictUpdate": false,
+                        "submitThrowsError": true,
+                        "uniqueId": [Function],
+                        "validateDisabledFields": false,
+                        "validateOnBlur": true,
+                        "validateOnChange": false,
+                        "validateOnInit": true,
+                        "validationDebounceOptions": Object {
+                          "leading": false,
+                          "trailing": true,
+                        },
+                        "validationDebounceWait": 250,
+                      },
+                    },
+                    "strict": false,
+                  },
+                  "sync": [Function],
+                  "type": "text",
+                  "validationAsyncData": Object {},
+                  "validationErrorStack": Array [
+                    "The Name field is required.",
+                  ],
+                  "validationFunctionsData": Array [],
+                }
+              }
+              placeholder={null}
+              type={null}
+            >
+              <div
+                className="input_set"
+              >
+                <label
+                  htmlFor="name--1"
+                >
+                  Name
+                </label>
+                <span
+                  className="form_con"
+                >
+                  <input
+                    autoFocus={false}
+                    checked={null}
+                    disabled={false}
+                    id="name--1"
+                    label="Name"
+                    name="name"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Your Name"
+                    type="text"
+                    value=""
+                  />
+                </span>
+              </div>
+            </Input>
+            <br />
+            <button
+              className="action-button"
+              onClick={[Function]}
+              type="submit"
+            >
+              <FormattedMessage
+                id="form.submit.label"
+                values={Object {}}
+              >
+                <span>
+                  Submit
+                </span>
+              </FormattedMessage>
+            </button>
+            <p />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</Container>
+`;

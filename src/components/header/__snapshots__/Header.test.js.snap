@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component renders correctly have to match snapshot 1`] = `
+<Styled(header)
+  role="banner"
+>
+  <inject-Menu-with-locale />
+  <inject-MyComponent-with-locale />
+  <React.Fragment>
+    <span>
+      Fragment!
+    </span>
+  </React.Fragment>
+</Styled(header)>
+`;

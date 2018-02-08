@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component renders correctly have to match snapshot 1`] = `
+<Styled(nav)>
+  <SmartLink
+    exact={true}
+    to="/"
+  />
+  <SmartLink
+    to="/about"
+  />
+  <SmartLink
+    to="/form"
+  />
+  <SmartLink
+    to="/auth"
+  />
+  <SmartLink
+    to="/dynamic"
+  />
+  <SmartLink
+    to="/blog"
+  />
+</Styled(nav)>
+`;
