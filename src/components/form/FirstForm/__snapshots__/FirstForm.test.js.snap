@@ -3,7 +3,7 @@
 exports[`Component renders correctly have to match snapshot 1`] = `
 <Container>
   <div
-    className="app_content"
+    className="app__content"
     css="css-1uifu4x"
   >
     <div

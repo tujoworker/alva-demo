@@ -14,7 +14,7 @@ import fetch from 'isomorphic-fetch'
 import Config from '../config/Config'
 
 injectGlobal`
-    html, body, #root, .app__root, #main_content {
+    html, body, #root, .app__root, #main__content {
         margin: 0;
         width: 100%;
         height: 100%;

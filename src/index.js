@@ -25,7 +25,10 @@ if (false && process.env.NODE_ENV !== 'production') {
 if (typeof document !== 'undefined') {
   const render = Comp => {
     // so we not get this error: "Warning: Expected server HTML to contain a matching <div> in <div>."
-    const renderMethod = !!module.hot ? ReactDOM.render : ReactDOM.hydrate
+    // const renderMethod = !!module.hot ? ReactDOM.render : ReactDOM.hydrate
+    const renderMethod = module.hot
+      ? ReactDOM.render
+      : ReactDOM.hydrate || ReactDOM.render
     renderMethod(
       <AppContainer>
         <Comp />

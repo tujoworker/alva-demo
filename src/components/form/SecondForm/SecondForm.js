@@ -75,7 +75,7 @@ export default class Form extends Component {
     anime(
       Object.merge(Config.viewTransactionAnimationIn, {
         // targets: '.app__root form'
-        targets: '.app__root .app_content_inner',
+        targets: '.app__root .app__content_inner',
         duration: this.props.store.spinner.slowFadeNextView ? 2e3 : 300
       })
     )
@@ -107,7 +107,7 @@ export default class Form extends Component {
     // )
     anime(
       Object.merge(Config.viewTransactionAnimationOut, {
-        targets: '.app__root .app_content_inner',
+        targets: '.app__root .app__content_inner',
         complete: () => {
           this.props.history.push('/form/third')
           // this.props.store.regForm.setLocation('/form/third')

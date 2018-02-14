@@ -25,7 +25,7 @@ const tabHelper = css`
 export default class TabHelper extends Component {
   render() {
     return (
-      <a href="#main_content" tabIndex="1" css={tabHelper}>
+      <a href="#main__content" tabIndex="1" css={tabHelper}>
         <span>Skip to main content</span>
         {/* <span>{this.props.locale.L('core.tab_helper')}</span> */}
       </a>

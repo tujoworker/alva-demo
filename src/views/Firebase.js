@@ -4,14 +4,14 @@
  * @author Tobias Høegh <tobias@tujo.no>
  */
 
-import { withRouteData } from 'alva/static'
+import { getRouteProps } from 'alva/static'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import firebase from '../dm/Firebase'
 
 import { Container } from '../components/Wrapper'
 
-@withRouteData
+@getRouteProps
 export default class Firebase extends Component {
   state = {
     title: typeof document === 'undefined' ? this.props.title : ''
@@ -42,7 +42,7 @@ export default class Firebase extends Component {
   }
 }
 
-// import { withRouteData } from 'alva/static'
+// import { getRouteProps } from 'alva/static'
 // import React, { Component } from 'react'
 // import firebase from 'firebase'
 //

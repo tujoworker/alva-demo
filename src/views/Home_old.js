@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react'
-// import { getSiteProps } from 'alva/static'
+// import { getRouteProps } from 'alva/static'
 
 import logoImg from '../logo.png'
 
@@ -32,7 +32,7 @@ export default class Home extends Component {
   }
 }
 
-// export default getSiteProps(() => (
+// export default getRouteProps(() => (
 //     <div>
 //         <Container>
 //             <h1 className={myStyle}>Welcome to</h1>
@@ -42,4 +42,4 @@ export default class Home extends Component {
 //     </div>
 // ))
 
-// export default getSiteProps()
+// export default getRouteProps()

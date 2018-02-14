@@ -1,8 +1,8 @@
 import React from 'react'
-import { withRouteData, Link } from 'alva/static'
+import { getRouteProps, Link } from 'alva/static'
 //
 
-export default withRouteData(({ post }) => (
+export default getRouteProps(({ post }) => (
   <div>
     <Link to="/blog">{'<'} Back</Link>
     <br />

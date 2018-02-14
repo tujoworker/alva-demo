@@ -19,7 +19,7 @@ import React, { Component } from 'react'
 export default class Details extends Component {
   render() {
     return (
-      <div className="not_found app_content_inner">
+      <div className="not_found app__content_inner">
         {/* <Anime
 					easing="easeOutSine"
 					duration={1e3}

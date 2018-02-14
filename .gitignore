@@ -6,6 +6,7 @@
 
 # production
 /dist
+/build
 
 # misc
 .importjs.js

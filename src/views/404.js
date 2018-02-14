@@ -1,8 +1,24 @@
-import React from 'react'
-//
+import React, { Component } from 'react'
 
-export default () => (
-  <div>
-    <h1>404 - Oh no's! We couldn't find that page :(</h1>
-  </div>
-)
+export default class extends Component {
+  state = {
+    ready: false
+  }
+  componentDidMount() {
+    this.makeReady()
+  }
+  makeReady = () => {
+    if (!this.state.ready) {
+      this.setState({
+        ready: true
+      })
+    }
+  }
+  render() {
+    return this.state.ready ? (
+      <div>
+        <h1>404 - Oh no's! We couldn't find that page :(</h1>
+      </div>
+    ) : null
+  }
+}

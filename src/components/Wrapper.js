@@ -53,7 +53,7 @@ const AppContentInner = css`
 // const Link = Div.withComponent('a')
 
 export const InnerContainer = props => (
-  <div css={AppContentInner} className="app_content_inner">
+  <div css={AppContentInner} className="app__content_inner">
     {props.children}
   </div>
 )
@@ -61,7 +61,7 @@ InnerContainer.propTypes = {
   children: PropTypes.node.isRequired
 }
 export const Container = props => (
-  <div css={AppContent} className="app_content">
+  <div css={AppContent} className="app__content">
     <div css={AppContentInner}>{props.children}</div>
   </div>
 )

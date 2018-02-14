@@ -8,21 +8,48 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 //in case we use this.props.history.push to navigate to a new location
-import { Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
+import universal from 'react-universal-component'
 // import { Switch } from 'alva/static'
 // import GlobalEmitter from '../helpers/GlobalEmitter'
-import LazyRoute from 'react-lazy-route' // https://github.com/MtDalPizzol/react-lazy-route
+// import LazyRoute from 'react-lazy-route' // https://github.com/MtDalPizzol/react-lazy-route
 
 import Spinner from '../components/core/routing/Spinner'
 import NotFound from '../views/NotFound'
 // import '../styles/form.css'
 
-const FirstForm = () => import('../components/form/FirstForm/FirstForm')
-const SecondForm = () => import('../components/form/SecondForm/SecondForm')
-const RequiredStep = () =>
-  import('../components/form/RequiredStep/RequiredStep')
-const ContinueCardQuestion = () =>
-  import('../components/form/Dialogs/ContinueCardQuestion')
+const FirstForm = universal(
+  () => import('../components/form/FirstForm/FirstForm'),
+  {
+    // minDelay: 5e3,
+    loading: Spinner,
+    error: NotFound
+  }
+)
+const SecondForm = universal(
+  () => import('../components/form/SecondForm/SecondForm'),
+  {
+    // minDelay: 5e3,
+    loading: Spinner,
+    error: NotFound
+  }
+)
+const RequiredStep = universal(
+  () => import('../components/form/RequiredStep/RequiredStep'),
+  {
+    // minDelay: 5e3,
+    loading: Spinner,
+    error: NotFound
+  }
+)
+const ContinueCardQuestion = universal(
+  () => import('../components/form/Dialogs/ContinueCardQuestion'),
+  {
+    // minDelay: 5e3,
+    loading: Spinner,
+    error: NotFound
+  }
+)
 
 @inject('store')
 @observer
@@ -42,40 +69,26 @@ class View extends Component {
   render() {
     return (
       <Switch>
-        <LazyRoute
-          exact
-          path="/form"
-          render={RequiredStep}
-          onLoading={Spinner}
-        />
-        <LazyRoute
+        <Route exact path="/form" component={RequiredStep} />
+        <Route
           exact
           path="/form/first"
           // restrict={!this.props.store.regForm.hasRequiredData()}
           // onForbidden={RequiredStep}
-          render={FirstForm}
-          onLoading={Spinner}
+          component={FirstForm}
         />
-        <LazyRoute
+        <Route
           exact
           path="/form/second"
           // restrict={!this.props.store.regForm.hasRequiredData()}
           // onForbidden={RequiredStep}
-          render={SecondForm}
+          component={SecondForm}
           // onLoading={Spinner}
-          onLoading={<Spinner color="blue" />}
+          // onLoading={<Spinner color="blue" />}
         />
-        <LazyRoute
-          path="/form/firststep"
-          render={RequiredStep}
-          onLoading={Spinner}
-        />
-        <LazyRoute
-          path="/form/continue"
-          render={ContinueCardQuestion}
-          onLoading={Spinner}
-        />
-        <LazyRoute path="*" component={NotFound} />
+        <Route path="/form/firststep" component={RequiredStep} />
+        <Route path="/form/continue" component={ContinueCardQuestion} />
+        <Route path="*" component={NotFound} />
       </Switch>
     )
   }

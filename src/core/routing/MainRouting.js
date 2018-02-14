@@ -68,9 +68,9 @@ export default class extends Component {
   render() {
     return (
       <MainComp
-        id="main_content"
+        id="main__content"
         role="main"
-        className="app_content routing_bg"
+        className="app__content routing__bg"
       >
         <Switch>
           <Route exact path="/" component={Home} />

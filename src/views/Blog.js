@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
-import { withRouteData, Switch, Route, Link } from 'alva/static'
+import { getRouteProps, Switch, Route, Link } from 'alva/static'
 //
 import Post from './Post'
 
-export default withRouteData(({ match, posts }) => (
+export default getRouteProps(({ match, posts }) => (
   <div>
     <Switch>
       <Route

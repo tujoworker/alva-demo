@@ -79,7 +79,7 @@ export default class Form extends Component {
       })
     )
     // anime({
-    // 	targets: '.app__root .app_content_inner',
+    // 	targets: '.app__root .app__content_inner',
     // 	easing: 'easeOutSine',
     // 	scale: [{ value: 0.95, duration: 220, delay: 100 }]
     // 	// translateX: [{ value: -100, duration: 400, delay: 300 }]
@@ -95,7 +95,7 @@ export default class Form extends Component {
     this.props.store.spinner.setSlowFadeNextView()
     anime(
       Object.merge(Config.viewTransactionAnimationOutFX, {
-        targets: '.app__root .app_content_inner',
+        targets: '.app__root .app__content_inner',
         complete: () => {
           console.log('Form Values!', form.values())
           this.props.history.push('/form/second')

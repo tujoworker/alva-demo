@@ -8,6 +8,7 @@ import { Provider } from 'mobx-react'
 import { Router } from 'alva/static'
 // import { Router } from 'react-router-dom'
 import React, { Component } from 'react'
+// import { hot } from 'react-hot-loader'
 
 import { MobxIntlProvider, localeStore } from './core/startup/locales'
 import AppStyle from './styles/AppStyle'
@@ -34,3 +35,5 @@ export default class App extends Component {
     )
   }
 }
+
+// export default hot(module)(App)

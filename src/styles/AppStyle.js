@@ -98,7 +98,7 @@ export default css`
     justify-content: center;
   }
 
-  .routing_bg {
+  .routing__bg {
     background: #fff;
   }
 `

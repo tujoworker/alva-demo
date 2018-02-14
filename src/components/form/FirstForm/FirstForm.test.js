@@ -6,7 +6,7 @@
 
 //test core packages
 // import { shallow, mount, fakeProps } from 'alva'
-import { withRouteData } from 'alva/static'
+import { getRouteProps } from 'alva/static'
 import { shallow, mount, fakeProps } from 'alva/tdd'
 import React from 'react'
 

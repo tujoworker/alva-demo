@@ -17,7 +17,7 @@ import { extractCritical } from 'emotion-server'
 // import withFiles from 'react-static/lib/plugins/withFileLoader'
 
 export default {
-  getSiteProps: () => ({
+  getSiteData: () => ({
     title: 'Alva Project',
     metaDescription:
       'Framework for dynamic-rendered or statically-exported {🚀} React apps'
@@ -35,20 +35,21 @@ export default {
 
     return [
       {
-        path: '/'
+        path: '/',
+        component: './src/components/Home'
       },
       {
         path: '/about'
       },
       {
         path: '/contentful',
-        getProps: () => ({
+        getData: () => ({
           body
         })
       },
       {
         path: '/firebase',
-        getProps: () => ({
+        getData: () => ({
           title
         })
       },
@@ -57,12 +58,12 @@ export default {
       },
       {
         path: '/blog',
-        getProps: () => ({
+        getData: () => ({
           posts
         }),
         children: posts.map(post => ({
           path: `/post/${post.id}`,
-          getProps: () => ({
+          getData: () => ({
             post
           })
         }))
@@ -76,7 +77,7 @@ export default {
         // 404 page by creating a route with `is404` set to `true` and defining a
         // `component` to use.
         is404: true,
-        component: './src/components/Pending'
+        component: './src/components/404'
       }
     ]
   },
@@ -93,7 +94,7 @@ export default {
   // // An optional custom React component that renders the base
   // // Document for every page, including the dev server. If used, it must utilize the
   // // `Html`, `Head`, `Body` and `children` for react-static to work. The optional
-  // // `siteProps` prop will contain any data returned by `getSiteProps` in your config
+  // // `siteProps` prop will contain any data returned by `getRouteProps` in your config
   // // and `renderMeta` prop refers to any data you potentially assigned to it during
   // // the custom `renderToHtml` hook.
   // Document: ({ Html, Head, Body, children, siteProps, renderMeta }) => (
@@ -168,7 +169,6 @@ export default {
   },
   webpack: config => {
     const renderer = new marked.Renderer()
-
     config.module.rules[0].oneOf.unshift({
       test: /\.md$/,
       use: [
@@ -183,6 +183,13 @@ export default {
         }
       ]
     })
+
+    // var Visualizer = require('webpack-visualizer-plugin')
+    // config.plugins.push(
+    //   new Visualizer({
+    //     filename: './statistics.html'
+    //   })
+    // )
 
     return config
   },
